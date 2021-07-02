@@ -7,9 +7,8 @@ fs.writeFileSync("bio.txt", " this is bio :)");
 fs.appendFileSync("bio.txt", " |welcome everyone !");
 
 //3:Read the data without getting the buffer data at first file encoding.
-const buf_bio = fs.readFileSync("bio.txt");
-convert = buf_bio.toString();
-console.log(convert);
+const readData = fs.readFileSync("bio.txt", "utf-8");
+console.log(readData);
 
 //4:Rename the file name to myBio.txt
 fs.renameSync("bio.txt", "myBio.txt");
