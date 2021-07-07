@@ -1,0 +1,15 @@
+{
+  "name": "npmmodule",
+  "version": "1.0.0",
+  "description": "learn NPM module",
+  "main": "npmModule.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "as Rakib",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "validator": "^13.6.0"
+  }
+}
