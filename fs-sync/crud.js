@@ -3,7 +3,7 @@ const fs = require('fs');
 //1:create a new file
 fs.writeFileSync("bio.txt", " this is bio :)");
 
-//2:Add more data into the file at the end of the exiting data.
+//2:Add more data into the file at the end of the exiting data
 fs.appendFileSync("bio.txt", " |welcome everyone !");
 
 //3:Read the data without getting the buffer data at first file encoding.
