@@ -15,7 +15,7 @@ fs.renameSync("bio.txt", "myBio.txt");
 
 //5:now delete the file
 fs.unlink('myBio.txt', function (err) {
-    if(err) throw err;
+    if (err) throw err;
     console.log("file Deleted!");
 })
 
