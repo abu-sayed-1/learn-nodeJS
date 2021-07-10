@@ -25,7 +25,6 @@ const getCurrentFilenames = () => {
     fs.readdirSync(__dirname).forEach(file => {
         console.log(file);
     });
-    console.log("");
 };
 
 getCurrentFilenames();
