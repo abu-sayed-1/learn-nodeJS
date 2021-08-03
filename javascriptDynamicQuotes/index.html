@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Javascript Dynamic Quotes</title>
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <div>
+                <div id="authorInfo"></div>
+                <div id="quotes"></div>
+            </div>
+        </div>
+        <div class="btn_content">
+            <button id="newQuotes">new Quotes</button>
+        </div>
+    </div>
+
+    <script>
+        const newQuotes = document.getElementById("newQuotes");
+        const quotes = document.getElementById("quotes");
+        const authorInfo = document.getElementById("authorInfo");
+        let realData = "";
+
+        const getNewQuotes = () => {
+            let randomNum = Math.floor(Math.random() * 1643);
+            let quotesData = realData[randomNum];
+            quotes.innerText = `${quotesData.text}`;
+            
+            quotesData.author === null ? authorInfo.innerText = "author: unknown" :
+                authorInfo.innerText = `author: ${quotesData.author}`;
+        };
+
+        const getQuotes = async () => {
+            const api = "https://type.fit/api/quotes";
+            try {
+                let data = await fetch(api);
+                realData = await data.json();
+                getNewQuotes();
+            } catch (error) {
+              console.log(error);
+            };
+        };
+        getQuotes();
+        newQuotes.addEventListener("click", getNewQuotes);
+    </script>
+</body>
+
+</html>

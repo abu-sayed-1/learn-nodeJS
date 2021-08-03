@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0%;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 24rem;
+    max-width: 40rem;
+    min-width: 40rem;
+    box-sizing: border-box;
+    background: rgb(236, 21, 165);
+    margin-bottom: 0%;
+    padding: 3rem;
+    color: white;
+}
+
+#authorInfo {
+    text-align: center;
+    padding-bottom: 0.7rem;
+    color: rgba(221, 221, 205, 0.699) !important;
+}
+
+.btn_content {
+    padding-top: 0%;
+    margin-top: 0%;
+}
+
+#newQuotes {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 20px;
+    border: none;
+    color: white;
+    background: rgba(69, 58, 172, 0.788);
+}
